@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MTConnectDevices xmlns="urn:mtconnect.org:MTConnectDevices:1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xsi:schemaLocation="urn:mtconnect.org:MTConnectDevices:1.1 http://www.mtconnect.org/schemas/MTConnectDevices_1.1.xsd">
+<Header bufferSize="130000" instanceId="1" creationTime="2014-11-06T19:21:45" sender="local" version="1.1"/>
+<Devices>
+		<Device id="PrusaMendel" iso841Class="6" name="PrusaMendel" sampleRate="10" uuid="PrusaMendel001">
+			<Description manufacturer="RepRap">Prusa Mendel</Description>
+			<DataItems>
+				<DataItem category="EVENT" id="PrusaMendelavail" type="AVAILABILITY"/>
+			</DataItems>
+			<Components>
+				<Axes id="PrusaMendel-axes" name="Axes">
+					<Components>
+						<Linear id="PrusaMendel-X" name="X">
+							<DataItems>
+								<DataItem category="SAMPLE" id="PrusaMendel-x" name="Xact" nativeUnits="MILLIMETER" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+							</DataItems>
+						</Linear>
+						<Linear id="PrusaMendel-Y" name="Y">
+							<DataItems>
+								<DataItem category="SAMPLE" id="PrusaMendel-y" name="Yact" nativeUnits="MILLIMETER" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+							</DataItems>
+						</Linear>
+						<Linear id="PrusaMendel-Z" name="Z">
+							<DataItems>
+								<DataItem category="SAMPLE" id="PrusaMendel-z" name="Zact" nativeUnits="MILLIMETER" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+							</DataItems>
+						</Linear>
+						<Linear id="PrusaMendel-E" name="E">
+							<DataItems>
+								<DataItem category="SAMPLE" id="PrusaMendel-e" name="Extruder" nativeUnits="MILLIMETER" subType="ACTUAL" type="POSITION" units="MILLIMETER"/>
+							</DataItems>
+						</Linear>
+					</Components>
+				</Axes>
+				<Sensor id="extruderSensor" name="ExtruderSensor">
+					<DataItems>
+						<DataItem category="SAMPLE" id="extruderTemp" name="extruder temp sensor" type="TEMPERATURE"/>
+					</DataItems>
+				</Sensor>
+				<Sensor id="bedSensor" name="BedSensor">
+					<DataItems>
+						<DataItem category="SAMPLE" id="bedTemp" name="bed temp sensor" type="TEMPERATURE"/>
+					</DataItems>
+				</Sensor>
+				<Controller id="ramps1.4" name="Ramps1.4">
+					<DataItems>
+						<DataItem category="EVENT" id="####-progress" name="build progress" type="EXECUTION"/>
+					</DataItems>
+				</Controller>
+			</Components>
+		</Device>
+</Devices>
+</MTConnectDevices>
